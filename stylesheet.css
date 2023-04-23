@@ -1,0 +1,2 @@
+@import url("stylesheet-normal.css") screen and (min-device-width: 680px);
+@import url("stylesheet-small.css") screen and (max-device-width: 680px);
