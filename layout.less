@@ -1,0 +1,118 @@
+@import "./style.less";
+
+@media screen and (min-width: 680px) {
+    @background-color: #EEE;
+
+    @page-left-margin: calc(50% - 20em);
+    @page-right-margin: calc(50% - 20em);
+    @page-top-margin: calc(50% - 13em);
+    @page-bottom-margin: calc(50% - 13em);
+
+    @shadow: 0px 1px 6px rgba(0, 0, 0, 0.3),
+    0px 0px 3px rgba(0, 0, 0, 0.3);
+    @border-radius: 8px;
+
+    @nth-term-container-width: 30em;
+
+
+    #sequence-input>* {
+        display: inline-block;
+    }
+
+    #general_layout()
+}
+
+@media screen and (max-width: 680px) {
+    @background-color: #FFF;
+
+    @page-left-margin: 2em;
+    @page-right-margin: 2em;
+    @page-top-margin: 3em;
+    @page-bottom-margin: 3em;
+
+    @shadow: none;
+    @border-radius: 0px;
+
+    @nth-term-container-width: calc(100% - 1em);
+
+    #sequence-input{
+        width: 100%;
+
+        & > * {
+            display: block;
+        }
+
+        & > input {
+            width: calc(100% - 4em);
+        }
+    } 
+    
+    #sequence-output{
+        width: 100%;
+    }
+    
+    #general_layout()
+}
+
+#general_layout() {
+    body {
+        background-color: @background-color;
+    }
+    
+    body>div {
+        position: absolute;
+        left: @page-left-margin;
+        right: @page-right-margin;
+        top: @page-top-margin;
+        bottom: @page-bottom-margin;
+    
+        box-shadow: @shadow;
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    
+        background-color: #FFF;
+        border-radius: @border-radius;
+    }
+    
+    
+    #sequence-tip {
+        display: block;
+        padding-top: 8px;
+        border-top: 1px solid #888;
+        font-size: 0.8em;
+        text-align: center;
+    }
+    
+    #nth-term-container {
+        padding: 8px;
+    
+        border: 2px solid #CCC;
+    
+        border-radius: @border-radius;
+    
+        width: @nth-term-container-width;
+        height: 3em;
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #sequence-data {
+        border: none;
+        outline: none;
+    
+        border-bottom: 1px solid #888;
+        text-align: center;
+    }
+}
+
+
