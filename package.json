@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "fraction.js": "^4.2.0"
+    "fraction.js": "^4.2.0",
+    "vite": "^5.3.1"
+  },
+  "devDependencies": {
+    "less": "^4.2.0"
   }
 }
