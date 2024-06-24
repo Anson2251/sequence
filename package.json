@@ -6,7 +6,7 @@
   "devDependencies": {
     "less": "^4.2.0"
   },
-  "script": {
+  "scripts": {
     "build": "npm exec vite build",
     "dev": "npm exec vite"
   }
